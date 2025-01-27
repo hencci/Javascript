@@ -13,6 +13,12 @@ function player(name, marker) {
     this.marker = marker;
 }
 
-Player.prototype.getMarker = function() {
+player.prototype.getMarker = function() {
     console.log(`My marker is '${this.marker}'`);
 };
+
+Object.getPrototypeOf(player.prototype); // returns Object.prototype
+
+// Now make `Player` objects inherit from `Person`
+Object.setPrototypeOf(player.prototype, person.prototype);
+Object.getPrototypeOf(player.prototype); // returns Person.prototype
