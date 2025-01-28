@@ -22,3 +22,12 @@ Object.getPrototypeOf(player.prototype); // returns Object.prototype
 // Now make `Player` objects inherit from `Person`
 Object.setPrototypeOf(player.prototype, person.prototype);
 Object.getPrototypeOf(player.prototype); // returns Person.prototype
+
+const player1 = new player('steve', 'X');
+const player2 = new player('also steve', 'O');
+
+player1.sayName(); // Hello, I'm steve!
+player2.sayName(); // Hello, I'm also steve!
+
+player1.getMarker(); // My marker is 'X'
+player2.getMarker(); // My marker is 'O
