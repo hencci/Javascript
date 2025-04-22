@@ -14,20 +14,22 @@
 }
 
 .dropdown-menu {
-    display: none;
-    position: absolute;
+    display: block;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none; /* Not clickable */
+}
+  
+.dropdown-menu.visible {
+    opacity: 1;
     background-color: #f1f1f1;
-    min-width: 160px;
-    margin-top: 5px;
     border-radius: 5px;
     box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-    z-index: 1;
+    transform: translateY(0);
+    pointer-events: auto;
 }
-
-.dropdown-menu.visible {
-    display: block;
-}
-
+  
 .dropdown-menu li {
     padding: 10px;
     list-style: none;
