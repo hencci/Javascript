@@ -29,3 +29,15 @@ function goToSlide(index) {
     currentIndex = index;
     updateCarousel();
 }
+
+// Go to the next slide (with wrap-around)
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateCarousel();
+}
+  
+// Go to the previous slide (with wrap-around)
+function prevSlide() {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateCarousel();
+}
