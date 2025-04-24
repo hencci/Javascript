@@ -23,3 +23,9 @@ function updateCarousel() {
     dots.forEach(dot => dot.classList.remove('active')); // Remove all active classes
     dots[currentIndex].classList.add('active'); // Highlight current dot
 }
+
+// Navigate to a specific slide
+function goToSlide(index) {
+    currentIndex = index;
+    updateCarousel();
+}
