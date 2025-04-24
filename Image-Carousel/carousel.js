@@ -50,3 +50,8 @@ prevBtn.addEventListener('click', prevSlide);
 function startAutoSlide() {
     interval = setInterval(nextSlide, 5000);
 }
+
+// Stops the automatic slide transition
+function stopAutoSlide() {
+    clearInterval(interval);
+}
