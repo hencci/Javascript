@@ -16,7 +16,7 @@ slides.forEach((_, i) => {
     dotsContainer.appendChild(dot);
 });
 
-const dots = document.querySelectorAll('dots');
+const dots = document.querySelectorAll('.dot');
 
 // Updates the slide position and dot indicators
 function updateCarousel() {
