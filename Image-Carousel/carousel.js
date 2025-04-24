@@ -41,3 +41,7 @@ function prevSlide() {
     currentIndex = (currentIndex - 1 + slides.length) % slides.length;
     updateCarousel();
 }
+
+// Attach event listeners to arrow buttons
+nextBtn.addEventListener('click', nextSlide);
+prevBtn.addEventListener('click', prevSlide);
