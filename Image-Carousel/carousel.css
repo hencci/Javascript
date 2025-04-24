@@ -8,6 +8,13 @@ body {
     background-color: brown;
 }
 
+h1 {
+    text-align: center;
+    color: white;
+    font-style: oblique;
+    letter-spacing: 20px;
+}
+
 .carousel-container {
   position: relative;
   overflow: hidden;
