@@ -14,3 +14,12 @@ slides.forEach((_, i) => {
     dot.addEventListener('click', () => goToSlide(i)); // Add click handler
     dotsContainer.appendChild(dot);
 });
+
+const dots = document.querySelectorAll('dots');
+
+// Updates the slide position and dot indicators
+function updateCarousel() {
+    track.style.transform = `translateX(-${currentIndex * 100}%)`; // Move track
+    dots.forEach(dot => dot.classList.remove('active')); // Remove all active classes
+    dots[currentIndex].classList.add('active'); // Highlight current dot
+}
