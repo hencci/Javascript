@@ -3,6 +3,7 @@ const slides = document.querySelectorAll('.carousel-slide');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 const dotsContainer = document.getElementById('dots');
+const carouselContainer = document.querySelector('.carousel-container');
 let currentIndex = 0;
 let interval;
 
@@ -55,3 +56,10 @@ function startAutoSlide() {
 function stopAutoSlide() {
     clearInterval(interval);
 }
+
+// Start auto-slide on page load
+startAutoSlide();
+
+// Pause auto-slide on mouse hover, resume when mouse leaves
+carouselContainer.addEventListener('mouseenter', stopAutoSlide);
+carouselContainer.addEventListener('mouseleave', startAutoSlide);
