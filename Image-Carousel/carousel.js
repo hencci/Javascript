@@ -45,3 +45,8 @@ function prevSlide() {
 // Attach event listeners to arrow buttons
 nextBtn.addEventListener('click', nextSlide);
 prevBtn.addEventListener('click', prevSlide);
+
+// Starts automatic slide transition every 5 seconds
+function startAutoSlide() {
+    interval = setInterval(nextSlide, 5000);
+}
